@@ -1,0 +1,10 @@
+libg\market\potatobags\dtos\PotatoBag.class
+libg\market\potatobags\rest\PotatoBagsController.class
+libg\market\potatobags\ManagePotatoApplication.class
+libg\market\potatobags\exception\ExceptionUtil.class
+libg\market\potatobags\ManagePotatoBeanConfiguration.class
+libg\market\potatobags\util\PotatoBagsUtil.class
+libg\market\potatobags\util\RandomString.class
+libg\market\potatobags\dtos\PotatoBagsInMarket.class
+libg\market\potatobags\rest\PotatoBagsService.class
+libg\market\potatobags\dtos\Supplier.class
