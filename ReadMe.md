@@ -1,3 +1,5 @@
+This application is built on Spring Boot and Maven.  
+
 Steps to build the project :
  - Setup Maven locally.
  - Clone the project into your local git repository
