@@ -46,16 +46,16 @@ public class PotatoBagsService {
 		List<PotatoBag> result = new ArrayList<PotatoBag>();
 		
 		List<PotatoBag> bagsInMarket = potatoBagsInMarket.getPotatoBagsList();
-		System.out.println("no of bags in list :: "+bagsInMarket.size());
 		int counter = 1;
-		for(PotatoBag bag : bagsInMarket) {
-			result.add(bag);
-			counter ++;
-			if(counter > noOfBagsToReturn) {
-				break;
+		if(bagsInMarket!=null) {
+			for (PotatoBag bag : bagsInMarket) {
+				result.add(bag);
+				counter++;
+				if (counter > noOfBagsToReturn) {
+					break;
+				}
 			}
 		}
-		
 		return result;
 		
 	}

@@ -6,10 +6,9 @@ package libg.market.potatobags.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.*;
 
 import libg.market.potatobags.dtos.PotatoBag;
 import libg.market.potatobags.exception.ExceptionUtil;
@@ -19,7 +18,7 @@ import libg.market.potatobags.util.PotatoBagsUtil;
  * @author Renuka
  *
  */
-@RestController
+@Controller
 public class PotatoBagsController {
 
 	@Autowired
@@ -36,24 +35,23 @@ public class PotatoBagsController {
 	 * @return List<PotatoBag> list of potato bags
 	 */
 	@RequestMapping("/getPotatoBagsForSale")
-	public List<PotatoBag> getPotatoBagsForSale(@RequestParam(value = "noOfBagsToReturn", required = false) Integer noOfBagsToReturn){
+	public String getPotatoBagsForSale(@RequestParam(value = "noOfBagsToReturn", required = false) Integer noOfBagsToReturn,  ModelMap model){
 		if(noOfBagsToReturn == null || noOfBagsToReturn == 0) {
 			noOfBagsToReturn = DEFAULT_BAGS_TO_RETURN;
 		}
 		List<PotatoBag> result = potatoBagsService.getListOfBagsInMarket(noOfBagsToReturn);
-
-		return result;		
+		model.put("bagList",result);
+		return "potatobags";
 	}
 
 	/**
 	 * Rest call to add potato bag to the market.
-	 * @param bagDetails PotatoBag object 
 	 * @throws Exception 
 	 */
-	@RequestMapping("/addPotatoBagToMarket")
-	public void addPotatoBagToMarket(@RequestBody PotatoBag bagDetails) throws Exception{
-		System.out.println("Input details :: "+ bagDetails.toString());
+	@PostMapping("/addPotatoBagToMarket")
+	public void addPotatoBagToMarket(ModelMap model) throws Exception{
 		try {
+			PotatoBag bagDetails = (PotatoBag) model.get("bagDetails");
 			potatoBagsUtil.validateInput(bagDetails);
 
 			potatoBagsService.addPotatoBagToMarket(bagDetails);
