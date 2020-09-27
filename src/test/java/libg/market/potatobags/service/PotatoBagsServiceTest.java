@@ -34,7 +34,7 @@ import libg.market.potatobags.rest.PotatoBagsService;
 @ActiveProfiles("test")
 @RunWith(SpringJUnit4ClassRunner.class)
 public class PotatoBagsServiceTest {
-/*
+
 	@Spy
 	private PotatoBagsInMarket potatoBagsInMarket;
 
@@ -43,7 +43,6 @@ public class PotatoBagsServiceTest {
 
 	@Test
 	public void whenMarketListIsEmpty_test_addPotatoBagToMarket() {
-
 
 		PotatoBag bagToadd = createPotatoBagToAdd("1",20,"12/06/2019",50,Supplier.DE_COSTER);
 		PotatoBagsInMarket expectedResult = new PotatoBagsInMarket();
@@ -142,5 +141,5 @@ public class PotatoBagsServiceTest {
 		bagToadd.setSupplier(suppliername);
 		return bagToadd;
 	}
-*/
+
 }

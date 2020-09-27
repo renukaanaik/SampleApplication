@@ -32,7 +32,7 @@ import org.springframework.ui.ModelMap;
 @ActiveProfiles("test")
 @RunWith(SpringJUnit4ClassRunner.class)
 public class PotatoBagsControllerTest {
-/*
+
 	@Autowired
 	private PotatoBagsService potatoBagsService;
 
@@ -108,7 +108,7 @@ public class PotatoBagsControllerTest {
 		
 		potatoBagsInMarket.setPotatoBagsList(list);
 		return potatoBagsInMarket;
-	}*/
+	}
 	
 
 }
