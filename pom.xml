@@ -22,6 +22,26 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>renukaadeo11186</id>
+			<url>https://pkgs.dev.azure.com/renukaadeo11186/_packaging/renukaadeo11186/maven/v1</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>renukaadeo11186</id>
+			<url>https://pkgs.dev.azure.com/renukaadeo11186/_packaging/renukaadeo11186/maven/v1</url>
+		</repository>
+	</distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
