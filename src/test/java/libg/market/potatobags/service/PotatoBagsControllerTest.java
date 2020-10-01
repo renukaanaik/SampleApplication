@@ -48,7 +48,7 @@ public class PotatoBagsControllerTest {
 		PotatoBagsInMarket list = createPotatoBagsInMarket();
 		ModelMap model = null;
 		
-		Mockito.when(mock.getPotatoBagsForSale(noOfBagsToReturn,model)).thenCallRealMethod();
+		//Mockito.when(mock.getPotatoBagsForSale(noOfBagsToReturn,model)).thenCallRealMethod();
 		Mockito.when(potatoBagsService.getListOfBagsInMarket(noOfBagsToReturn)).thenReturn(list.getPotatoBagsList());
 		
 		//List<PotatoBag> result = mock.getPotatoBagsForSale(noOfBagsToReturn,model);
@@ -62,7 +62,7 @@ public class PotatoBagsControllerTest {
 		PotatoBagsInMarket list = createPotatoBagsInMarket();
 		ModelMap model = null;
 		
-		Mockito.when(mock.getPotatoBagsForSale(noOfBagsToReturn,model)).thenCallRealMethod();
+		//Mockito.when(mock.getPotatoBagsForSale(noOfBagsToReturn,model)).thenCallRealMethod();
 		Mockito.when(potatoBagsService.getListOfBagsInMarket(noOfBagsToReturn)).thenReturn(list.getPotatoBagsList());
 		
 		//List<PotatoBag> result = mock.getPotatoBagsForSale(noOfBagsToReturn,model);
@@ -75,7 +75,7 @@ public class PotatoBagsControllerTest {
 		PotatoBagsInMarket list = createPotatoBagsInMarket();
 		ModelMap model = null;
 
-		Mockito.when(mock.getPotatoBagsForSale(null,model)).thenCallRealMethod();
+		//Mockito.when(mock.getPotatoBagsForSale(null,model)).thenCallRealMethod();
 		Mockito.when(potatoBagsService.getListOfBagsInMarket(Mockito.anyInt())).thenReturn(list.getPotatoBagsList());
 		
 		//List<PotatoBag> result = mock.getPotatoBagsForSale(null,model);
